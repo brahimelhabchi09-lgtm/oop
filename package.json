@@ -1,0 +1,12 @@
+{
+  "name": "novacraft-studio",
+  "version": "1.0.0",
+  "description": "Site web pour NovaCraft Studio",
+  "scripts": {
+    "build": "tailwindcss -i ./style/input.css -o ./style/output.css --minify",
+    "watch": "tailwindcss -i ./style/input.css -o ./style/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

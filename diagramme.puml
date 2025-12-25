@@ -1,0 +1,50 @@
+@startuml
+' =====================
+' Domain Model UML
+' =====================
+
+abstract class User {
+    - id : int
+    - firstName : string
+    - lastName : string
+    - email : string
+    - password : string
+    + login() : bool
+    + logout() : void
+}
+
+class Reader {
+    + borrowBook(bookId : int) : Borrow
+    + returnBook(borrowId : int) : void
+}
+
+class Admin {
+    + addBook(b : Book) : void
+    + updateBook(b : Book) : void
+    + deleteBook(id : int) : void
+}
+
+class Book {
+    - id : int
+    - title : string
+    - author : string
+    - year : int
+    - status : string
+    + isAvailable() : bool
+}
+
+
+
+User <|-- Reader
+User <|-- Admin
+
+Reader "0..*"--"1..*"Book
+(Book,Reader)..Borrow
+ class Borrow {
+    - readerId : int
+    - bookId : int
+    - borrowDate : Date
+    - returnDate : Date
+   
+}
+@enduml
