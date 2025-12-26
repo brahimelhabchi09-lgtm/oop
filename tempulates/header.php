@@ -6,7 +6,6 @@
                     <a href="/" class="flex items-center space-x-3">
                         <img src="style/images/novacraft.png" class="w-[160px] h-auto">
                     </a>
-                    
                 </div>
                 
                 <div class="hidden lg:flex items-center space-x-8">
