@@ -3,8 +3,8 @@
 try {
     $host = 'localhost';
     $name = 'biblio';
-    $user = 'saikyouboi';
-    $pass = 'ilias1234';
+    $user = 'gigantegordo';
+    $pass = '2004';
 
     $connection = mysqli_connect($host, $user, $pass, $name);
 

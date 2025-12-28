@@ -15,7 +15,7 @@
 </head>
 <body class="bg-gray-50">
     
-<section id="404" class="page hidden">
+<section id="404" class="page">
             <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 py-12 px-4">
                 <div class="max-w-lg w-full text-center">
                     <h1 class="text-9xl font-bold text-gray-800 mb-4">404</h1>

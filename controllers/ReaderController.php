@@ -9,7 +9,10 @@ class ReaderController {
    public function book(){
         require_once __DIR__ ."/../views/book.php"; 
    } 
-   public function returnBook() : void{
+   public function profile(){
+        require_once __DIR__ ."/../views/profile.php"; 
+   } 
+     public function returnBook() : void{
      
    }
    public function borrowBook() : Borrow{

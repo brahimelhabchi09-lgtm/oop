@@ -1,5 +1,5 @@
 <?php
- class AuthControlle{
+ class AuthController{
     public function validationRegidter(){
 
         session_start();
@@ -62,4 +62,12 @@
         }
 
     }
+
+    public function login() : bool {
+        require_once __DIR__ ."/../views/login.php"; 
+    }
+
+    public function register() : bool {
+        require_once __DIR__ ."/../views/register.php"; 
+   }
 }

@@ -6,39 +6,75 @@ class Router {
    private array $availablePages = [
         "/" => [
             "controller" => "ReaderController",
-            "method" => "home"
+            "method" => [
+                "GET" => "home"
+            ]
         ], 
         "/books" => [
             "controller" => "ReaderController",
-            "method" => "books"
+            "method" =>[
+                 "GET" => "books"
+            ]
         ],
         "/book" => [
             "controller" => "ReaderController",
-            "method" => "book"
+            "method" =>[
+                 "GET" => "book"
+            ]
         ],
-        "/login",
-        "/register",
-        "/profile",
-        "/404",
+        "/login" => [
+            "controller" => "AuthController",
+            "method" => [
+                "POST" => "submitLogin",
+                "GET" => "login"
+            ]
+        ],
+        "/register" => [
+            "controller" => "AuthController",
+            "method" => [
+                "POST" => "submitLogin",
+                "GET" => "login"
+            ]
+        ],
+        "/profile" => [
+            "controller" => "ReaderController",
+            "method" => [
+                "GET" => "profile"
+            ]
+        ],
         "/admin/books" => [
             "controller" => "AdminController",
-            "method" => "books"
-        ],
-        "/admin/addBook" => [
+            "method" => [
+                "GET" => "books"
+            ]
+            ],
+        "/admin/addbook" => [
             "controller" => "AdminController",
-            "method" => "addBook"
+           "method"=>
+           [ "POST" => "submitAddBook",
+             "GET" =>  "addBook"
+           ]
         ],
-        "/admin/updateBook" => [
+        "/admin/updatebook" => [
             "controller" => "AdminController",
-            "method" => "updateBook"
+            "method"=>
+           [ "POST" => "submitUpdateBook",
+             "GET" =>  "updateBook"
+           ]
         ],
         "/admin/borrows" => [
             "controller" => "AdminController",
-            "method" => "borrows"
+            "method"=>
+           [
+             "GET" =>  "borrows"
+           ]
         ],
         "/admin/readers" => [
             "controller" => "AdminController",
-            "method" => "readers"
+            "method"=>
+           [ 
+             "GET" =>  "readers"
+           ]
         ]
     ];  
 
@@ -57,11 +93,12 @@ class Router {
 
 
         if (!$found) {
-          $this->page= "404";
+           require_once __DIR__ ."/../views/404.php";
         }
 
         $controller = $this->availablePages[$this->page]["controller"];
-        $method = $this->availablePages[$this->page]["method"];
+        
+        $method = $this->availablePages[$this->page]["method"][$_SERVER["REQUEST_METHOD"]];
 
         require_once __DIR__ . "/../controllers/$controller.php";
         $c = new $controller();

@@ -6,11 +6,11 @@ class AdminController {
     public function borrows(){
        require_once __DIR__ ."/../views/admin/borrows.php";  
     }
-    public function books(){
+    public function books(){                 
        require_once __DIR__ ."/../views/admin/books.php";  
     }
     public function readers(){
-       require_once __DIR__ ."/../views/admin/reader.php";  
+       require_once __DIR__ ."/../views/admin/readers.php";  
     }
     public function updateBook(){
        require_once __DIR__ ."/../views/admin/updateBook.php";  

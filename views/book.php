@@ -14,7 +14,7 @@
     </style>
 </head>
 <body class="bg-gray-50"></body>
-<section id="book-detail" class="page hidden">
+<section id="book-detail" class="p d">
             <div class="container mx-auto px-4 py-12">
                 <button onclick="hideBook()" class="mb-6 text-blue-600 hover:text-blue-800 font-medium">
                     <i class="fas fa-arrow-left mr-2"></i> Back to Books

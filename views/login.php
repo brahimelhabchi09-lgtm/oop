@@ -15,7 +15,7 @@
 </head>
 <body class="bg-gray-50"></body>
  
- <section id="login" class="page hidden">
+ <section id="login" class="page">
             <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 py-12 px-4">
                 <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
                     <div class="text-center">
