@@ -5,7 +5,4 @@ class Book{
     private string $author ;
     private string $status ;
     private int $year ;
-    public function isAvailable() : bool {
-
-    } 
 }

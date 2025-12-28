@@ -22,6 +22,12 @@ class Router {
                  "GET" => "book"
             ]
         ],
+        "/borrowbook" => [
+            "controller" => "ReaderController",
+            "method" =>[
+                 "POST" => "borrowBook"
+            ]
+        ],
         "/login" => [
             "controller" => "AuthController",
             "method" => [
@@ -32,8 +38,14 @@ class Router {
         "/register" => [
             "controller" => "AuthController",
             "method" => [
-                "POST" => "submitLogin",
-                "GET" => "login"
+                "POST" => "submitRegister",
+                "GET" => "register"
+            ]
+        ],
+        "/logout" => [
+            "controller" => "AuthController",
+            "method" => [
+                "POST" => "logout"
             ]
         ],
         "/profile" => [
@@ -42,12 +54,18 @@ class Router {
                 "GET" => "profile"
             ]
         ],
+        "/admin" => [
+            "controller" => "AdminController",
+            "method" => [
+                "GET" => "dashboard"
+            ]
+        ],
         "/admin/books" => [
             "controller" => "AdminController",
             "method" => [
                 "GET" => "books"
             ]
-            ],
+        ],
         "/admin/addbook" => [
             "controller" => "AdminController",
            "method"=>
@@ -60,6 +78,13 @@ class Router {
             "method"=>
            [ "POST" => "submitUpdateBook",
              "GET" =>  "updateBook"
+           ]
+        ],
+        "/admin/deletebook" => [
+            "controller" => "AdminController",
+            "method"=>
+           [
+             "POST" =>  "deleteBook"
            ]
         ],
         "/admin/borrows" => [

@@ -1,7 +1,6 @@
    <?php
-   require_once __DIR__ ."/User.php";
-   class Reader extends User {
+class Reader extends User {
     
-    
+    public string $role = "reader";
     
 }

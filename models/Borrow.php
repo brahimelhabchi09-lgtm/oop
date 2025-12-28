@@ -2,6 +2,6 @@
 class Borrow {
     private int $readerId ; 
     private int $bookId ;
-    private Date $borrowDate;
-    private Date $returnDate;
+    private DateTime $borrowDate;
+    private DateTime $returnDate;
 }
